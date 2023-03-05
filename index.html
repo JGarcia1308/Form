@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <div id="divForm">
+        <h2>Inicio de Sesion</h2>
+        <form action="datos" class="loginform">
+            <li>
+                <label for="nombre" id="lblNombre">Usuario</label>
+                <input id="loginNombre" type="text" name="nombre" placeholder="Nombre de Usuario" required pattern="[a-zA-Z][a-zA-Z0-9-_]{3,32}">
+                <span class="loginform_hint">Introduce un Usuario Valido</span>
+            </li>
+            <li>
+                <label for="email" id="email">Email</label>
+                <input type="text" name="email" placeholder="Correo" required
+                pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?">
+                <span class="loginform_hint">Introduce un correo valido eje: someone@somewhere.com</span>
+            </li>
+            <li>
+                <label for="pass" id="pass">Contraseña</label>
+                <input type="password" name="pass" placeholder="Contraseña" required
+                    pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
+                <span class="loginform_hint">Debe tener al menos 8 caracteres.
+                    Debe tener al menos una letra mayuscula.
+                    Debe tener al menos una letra minuscula.
+                </span>
+            </li>
+            <label for="fecNac" id="fecNac">Fecha de Nacimiento</label>
+            <input type="date" name="fecNac" placeholder="dd/mm/aa" required >
+            <div id="loginformBtn">
+                <input id="btnSubmit" type="submit">
+            </div>
+
+        </form>
+    </div>
+</body>
+<script src="./renderer.js"></script>
+
+</html>

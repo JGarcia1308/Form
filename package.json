@@ -1,0 +1,16 @@
+{
+  "name": "Form",
+  "productName": "Form",
+  "description": "My Electron application description",
+  "keywords": [],
+  "main": "./main.js",
+  "version": "1.0.0",
+  "author": "jed13",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "22.0.2"
+  }
+}
